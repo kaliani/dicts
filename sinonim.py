@@ -13,6 +13,8 @@ for i in range(n):
     
 word = input()
 
-
+if word in my:
+  print(my[word])
+else:
+  print(list(my.keys())[list(my.values()).index(word)])
     
-print(my)
