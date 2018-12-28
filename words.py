@@ -5,6 +5,7 @@
 n = int(input())
 my = {}
 words = []
+allwords = []
 for i in range(n):
   word = input().split()
   words += word
@@ -17,12 +18,17 @@ for i in words:
     
     
 maximum = max([i for i in my.values()])
-
+minimum = min(sorted(words), key = len)
 
 for key, val in my.items():
-  if val == maximum and key == min(words, key = len):
-    print(key)
-
+  #print(val, maximum, key, minimum)
+  
+  if val == maximum:
+    allwords.append(key)
+    
+    
+k = sorted(allwords)
+print(k[0])
 
 
 
