@@ -15,18 +15,12 @@ for i in words:
     my[i] = 1
   else:
     my[i] += 1
-    
-    
 maximum = max([i for i in my.values()])
 minimum = min(sorted(words), key = len)
-
 for key, val in my.items():
   #print(val, maximum, key, minimum)
-  
   if val == maximum:
     allwords.append(key)
-    
-    
 k = sorted(allwords)
 print(k[0])
 
